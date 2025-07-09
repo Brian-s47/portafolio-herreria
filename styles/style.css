@@ -1,0 +1,75 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  /* previene scroll */
+  height: 100%;      /* asegúrate de que ocupe toda la ventana */
+  width: 100%;
+}
+
+#imageBackground { /* Imagen de fondo estatica */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
+
+#videoBackground { /* Video de fondo con animacion */
+  transform: scale(0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center bottom; /* centra hacia abajo para no cortar el fuego */
+  z-index: -1;
+}
+
+#herreria { /* Contenedor de elementos de herreria */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ocupa toda la pantalla */
+  z-index: 1; /* encima del fondo */
+}
+
+.herrero-container {
+  position: absolute;
+  left: 50%;
+  top: 77%;
+  transform: translate(-50%, -50%);
+}
+
+#herrero {
+  width: 80vw;
+  cursor: pointer;
+}
+
+#globo {
+  position: absolute;
+  bottom: 65%; /* encima del herrero */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* oculto por defecto */
+  width: 200px; /* ajusta según tu globo */
+}
+
+#globo img {
+  width: 100%;
+}
+
+#globo-texto {
+  position: absolute;
+  top: 30px; /* ajusta para centrar texto dentro del globo */
+  left: 25px;
+  right: 25px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+  text-align: center;
+}
+
